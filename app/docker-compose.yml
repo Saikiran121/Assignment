@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "80:80"
+    environment:
+      WORDPRESS_DB_HOST: lokesh.cuhwtehzwtsl.us-east-2.rds.amazonaws.com
+      WORDPRESS_DB_USER: admin
+      WORDPRESS_DB_PASSWORD: jfv7ki3Z0NK7pZwl91hA
+      WORDPRESS_DB_NAME: lokesh
+    volumes:
+      - wordpress_data:/var/www/html
+
+volumes:
+  wordpress_data:
